@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  object-fit: contain;
+}
+
+.dark .p-password .p-password-meter {
+  background-color: #2d3748;
+}
+
+.dark .p-password-meter-label {
+  color: #f7fafc;
+}

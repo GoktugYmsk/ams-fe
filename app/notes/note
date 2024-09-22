@@ -1,0 +1,19 @@
+  <div className="mb-8">
+        <h2 className="mb-4 text-lg font-bold">Users</h2>
+        {normalUsers.length > 0 ? (
+          <ul className="mb-4 grid grid-cols-3 gap-4">
+            {normalUsers.map((user) => (
+              <li
+                key={user.id}
+                className="flex h-24 items-center justify-center rounded bg-gray-50 dark:bg-gray-800"
+              >
+                <p className="text-gray-700 dark:text-gray-200">
+                  {user.name} - {user.email}
+                </p>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="text-gray-500">No users found.</p>
+        )}
+      </div> 

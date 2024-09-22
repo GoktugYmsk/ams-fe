@@ -4,6 +4,7 @@ import { ThemeModeScript } from "flowbite-react";
 import "./globals.css";
 import Header from "./components/Header";
 import Content from "./components/Content";
+import { TokenProvider } from "./TokenContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,8 +25,10 @@ export default function RootLayout({
       </head>
 
       <body className={inter.className}>
-        <Header />
-        {children}
+        <TokenProvider>
+          <Header />
+          {children}
+        </TokenProvider>
       </body>
     </html>
   );
